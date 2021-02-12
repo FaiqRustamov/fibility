@@ -35,8 +35,12 @@ body.my-login-page {
 
 .my-login-page .card-wrapper {
 	width: 400px;
+    
 }
-
+.my-login-page .card-wrapper {
+    width: 400px;
+    height: 700px !important;
+}
 .my-login-page .card {
 	border-color: transparent;
 	box-shadow: 0 4px 8px rgba(0,0,0,.05);
