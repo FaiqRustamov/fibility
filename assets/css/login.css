@@ -6,6 +6,17 @@ body.my-login-page {
 	background-color: #fff5f2;
 	font-size: 14px;
 }
+.btn{
+    margin-top: 35px;
+    padding:1rem 2rem;
+    background-color: #162c9b !important;
+    color: white;
+    width: 100%;
+    border-radius: 0px!important;
+}
+.form-control{
+    border-radius: 0px;
+}
 
 .my-login-page .brand {
 	width: 90px;
@@ -78,4 +89,8 @@ body.my-login-page {
     color:#162c9b;
     font-weight: bold;
     margin-bottom: 200px;
+
+}
+.signin-section{
+    margin-bottom: 20px;
 }

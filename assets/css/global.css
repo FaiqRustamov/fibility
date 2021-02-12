@@ -63,7 +63,7 @@ nav .nav-items .nav-link{
     font-family: var(--livvic);
     font-size: 14px;
 }
-/* footer{
+footer{
     justify-content: space-between;
     background-color: #ffffff;
   }
@@ -85,7 +85,7 @@ nav .nav-items .nav-link{
 }
 #all-rights{
     padding: 10px;
-} */
+}
 nav .nav-items .nav-link:hover a{
     color: #2439a0;
 }
