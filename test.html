@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>International Telephone Input - BOOTSTRAP INPUT GROUP</title>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/8.4.6/css/intlTelInput.css'>
+<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.14/css/intlTelInput.css" rel="stylesheet" />
+      <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.14/js/utils.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.14/js/intlTelInput.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.js"></script>
+      
+</head>
+
+
+<body>
+
+  <h1>International Telephone Input - BOOTSTRAP INPUT GROUP</h1>
+
+  <form action="" method="POST" onsubmit="return submitForm(this);">
+
+    <input type="tel"name ="phone1" id="phone1" value="">
+
+    <input type="tel" class="hide" id="hiden">
+
+    <button type="submit">Validate</button>
+
+</form>
+
+<script>
+  /* INITIALIZE BOTH INPUTS WITH THE intlTelInput FEATURE*/
+
+$("#phone1").intlTelInput({
+    initialCountry: "us",
+    separateDialCode: true,
+    preferredCountries: ["fr", "us", "gb"],
+    geoIpLookup: function (callback) {
+        $.get('https://ipinfo.io', function () {
+        }, "jsonp").always(function (resp) {
+            var countryCode = (resp && resp.country) ? resp.country : "";
+            callback(countryCode);
+        });
+    },
+    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.14/js/utils.js"
+});
+
+
+$("#hiden").intlTelInput({
+    initialCountry: "us",
+    dropdownContainer: 'body',
+    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.14/js/utils.js"
+});
+
+
+/* ADD A MASK IN PHONE1 INPUT (when document ready and when changing flag) FOR A BETTER USER EXPERIENCE */
+
+var mask1 = $("#phone1").attr('placeholder').replace(/[0-9]/g, 0);
+
+$(document).ready(function () {
+    $('#phone1').mask(mask1)
+});
+
+$("#phone1").on("countrychange", function (e, countryData) {
+    $("#phone1").val('');
+    var mask1 = $("#phone1").attr('placeholder').replace(/[0-9]/g, 0);
+    $('#phone1').mask(mask1);
+});
+
+
+/*ON SUBMIT...*/
+
+function submitForm(oFormElement) {
+
+
+    document.getElementById("hiden").value = $("#phone1").val().replace(/\s+/g, ''); // REMOVE ALL THE SPACES OF PHONE1 VALUE
+                                                                                     // PUT THE RESULT IN HIDEN INPUT 
+                                                                                     // AND TEST THIS LATTER TO SEE IF IT FITS WITH
+                                                                                     // the intlTelInput NUMBER FORMAT
+
+    //alert($("#hiden").val());
+
+
+    // AND IT WILL DISPLAY OK
+    if ($("#hiden").intlTelInput("isValidNumber") == true) {
+        alert("OK");
+        return true;
+    }
+    else {
+        alert("NOT OK");
+        return false;
+    }
+
+}
+
+$('input.hide').parent().hide();
+
+</script>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/8.4.7/js/intlTelInput.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
