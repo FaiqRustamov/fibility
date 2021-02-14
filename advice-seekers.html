@@ -11,54 +11,163 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
    <link rel="stylesheet" href=".//assets/css/profile.css">
-        <link rel="stylesheet" href="./assets/css/login.css">
+        <link rel="stylesheet" href="./assets/css/advice-seekers.css">
     <link rel="stylesheet" href="./assets/css/global.css">
     <link rel="stylesheet" href="./build/css/intlTelInput.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.3/rangeslider.min.css" integrity="sha512-Rp0yZ3NMh1xOUZ4VHYggmX4pq4ZJdpcOETH03qBD5qNDsqTBw1MzUnX0T5PcTJmr2mNTOmtbxsHaGwzjylNpHA==" crossorigin="anonymous" />
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
     <link rel="stylesheet" href="//mojoaxel.github.io/bootstrap-select-country/dist/css/bootstrap-select-country.min.css">
-    <style>
-        .slidecontainer {
-          width: 100%;
-        }
+    
+   <style>
+         .yes-no-radio-title {
+        margin-bottom: 5px;
         
-        .slider {
-          -webkit-appearance: none;
-          width: 100%;
-          height: 25px;
-          background: #d3d3d3;
-          outline: none;
-          opacity: 0.7;
-          -webkit-transition: .2s;
-          transition: opacity .2s;
-        }
-        
-        .slider:hover {
-          opacity: 1;
-        }
-        
-        .slider::-webkit-slider-thumb {
-          -webkit-appearance: none;
-          appearance: none;
-          width: 25px;
-          height: 25px;
-          background: #4CAF50;
-          cursor: pointer;
-        }
-        
-        .slider::-moz-range-thumb {
-          width: 25px;
-          height: 25px;
-          background: #4CAF50;
-          cursor: pointer;
-        }
- 
-.slider-selection {
-	background: #FF8282;
+      }
+      .radio-btns-option {
+        display: inline-block;
+        float: left;
+        margin: 0;
+        padding: 0;
+        font-size: 1em;
+      }
+      input[type="radio"] {
+        position: absolute;
+        left: -9000px;
+      }
+      
+      input[type="radio"]:checked + .radio-label {
+        background: #d9d9d9;
+        color: #fff;
+      }
+      
+      .radio-label {
+        display: inline-block;
+        border: 2px solid #d9d9d9;
+        border-right: none;
+        padding: 8px 30px;
+        margin: 0;
+        cursor: pointer;
+      }
+      
+      .radio-label:hover {
+        background: #d9d9d9;
+        color: #fff;
+      }
+      .radio-btns-option:first-of-type .radio-label {
+      
+      }
+      
+      .radio-btns-option:nth-of-type(2n) .radio-label {
+        border-right: 2px solid #d9d9d9;
+      
+      }
+       .range{
+  height: 80px;
+  border-radius: 10px;
+  padding: 0 65px 0 45px;
 }
 
-        </style>
+.sliderValue{
+  position: relative;
+  width: 100%;
+}
+.sliderValue span{
+  position: absolute;
+  height: 45px;
+  width: 45px;
+  transform: translateX(-70%) scale(0);
+  font-weight: 500;
+  top: -40px;
+  line-height: 55px;
+  z-index: 2;
+  color: #fff;
+  transform-origin: bottom;
+  transition: transform 0.3s ease-in-out;
+}
+.sliderValue span.show{
+  transform: translateX(-70%) scale(1);
+}
+.sliderValue span:after{
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  background: #664AFF;
+  border: 3px solid #fff;
+  z-index: -1;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  border-bottom-left-radius: 50%;
+  box-shadow: 0px 0px 8px rgba(0,0,0,0.1);
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+}
+.field{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  position: relative;
+}
+.field .value{
+  position: absolute;
+  font-size: 18px;
+  color: #595959;
+  font-weight: 600;
+}
+.field .value.left{
+  left: -32px;
+}
+.field .value.right{
+  right: -63px;
+}
+.range input{
+  -webkit-appearance: none;
+  width: 100%;
+  height: 9px;
+  background: #ddd;
+  outline: none;
+  border: none;
+  z-index: 2222;
+}
+.range input::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #162c9b;
+  cursor: pointer;
+}
+.range input::-moz-range-thumb{
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #162c9b;
+  cursor: pointer;
+}
+input[type=range] {
+      -webkit-appearance: none;
+      -moz-apperance: none;
+      height: 9px;
+
+      background-image: -webkit-gradient(linear,
+          left top, 
+          right top, 
+          color-stop(15%, #ff5126),
+          color-stop(15%, #eeeeee));
+
+      background-image: -moz-linear-gradient(left center,
+          #ff5126 0%, #ff5126 15%,
+          #eeeeee 15%, #eeeeee 100%);
+  }
+.range input::-webkit-progress-value {
+  background: #ff6e4a; 
+  content: '';
+  pointer-events: none;
+}
+
+    </style>
 </head>
 
 <body class="my-login-page">
@@ -148,11 +257,19 @@
                                 </div>
                                 
                                 <div class="form-group">
-                                    <input type="radio" class="btn-check" id="btn-check-2" checked autocomplete="off">
-                                    <label class="btn btn-primary" for="btn-check-2">Yes</label>
-                                    <input type="radio" class="btn-check" id="btn-check-2" checked autocomplete="off">
-<label class="btn btn-primary" for="btn-check-2">No</label>
+                                    <div class="yes-no-radio-container">
+                                        <div class="yes-no-radio-title">Is are was were the thing?</div>
+                                        <div class="radio-btns">
+                                          <span class="radio-btns-option">
+                                            <input type="radio" name="yes-no-radio" value="yes" id="radio-yes"><label class="radio-label" for="radio-yes">Yes</label>
+                                          </span>
+                                          <span class="radio-btns-option">
+                                            <input type="radio" name="yes-no-radio" value="no" id="radio-no"><label class="radio-label" for="radio-no" >No</label>
+                                          </span>
+                                        </div>
+                                      </div>
                                 </div>
+                                <br>
                                 <div><label for="sel1">Region*</label>
                                     <select class="form-control" id="sel1">
                                       <option>1</option>
@@ -171,8 +288,22 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="customRange2" class="form-label">Example range</label>
-                                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                                    <div class="range">
+                                        <div class="sliderValue">
+                                          <span>100</span>
+                                        </div>
+                                <div class="field">
+                                          <div class="value left">
+                                0</div>
+                                <input type="range" min="0" max="100000" value="60000" id="myRange" steps="1">
+                                          <div class="value right" style="margin-left:0px">
+                                100000</div>
                                 
+                                
+                                </div>
+                                <p style="text-align: center;">Value: <span id="demo"></span></p>
+                                
+                                </div>                                </div>
                                 <div class="form-group"><label for="sel1">Region*</label>
                                     <select class="form-control" id="sel1">
                                       <option>1</option>
@@ -228,16 +359,7 @@
         <!--  Footer End -->
         
     <!--  Footer End -->
-    <script src="path/to/intlTelInput.js"></script>
-    <script>
-        var RGBChange = function() {
-	$('#RGB').css('background', 'rgb('+r.getValue()+','+g.getValue()+','+b.getValue()+')')
-};
-
-var r = $('#R').slider()
-		.on('slide', RGBChange)
-		.data('slider');
-    </script>
+  
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/8.4.7/js/intlTelInput.js"></script>
@@ -249,12 +371,34 @@ var r = $('#R').slider()
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <script src="/assets/js/login.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
     <script>
-        var input = document.querySelector("#phone");
-        window.intlTelInput(input, {
-          // any initialisation options go here
-        });
-      </script>
+      $("input[type=range]").mousemove(function (e) {
+    var val = ($(this).val() - $(this).attr('min')) / ($(this).attr('max') - $(this).attr('min'));
+    var percent = val * 100;
+
+    $(this).css('background-image',
+        '-webkit-gradient(linear, left top, right top, ' +
+        'color-stop(' + percent + '%, #ff5126), ' +
+        'color-stop(' + percent + '%, #eeeeee)' +
+        ')');
+
+    $(this).css('background-image',
+        '-moz-linear-gradient(left center, #ff5126 0%, #ff5126 ' + percent + '%, #eeeeee ' + percent + '%, #eeeeee 100%)');
+}); 
+
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+   
+
+</script>
+
 </body>
 
 </html>

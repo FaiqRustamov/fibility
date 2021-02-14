@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body {
+        font-family: sans-serif;
+      }
+      .yes-no-radio-title {
+        margin-bottom: 5px;
+        
+      }
+      .radio-btns-option {
+        display: inline-block;
+        float: left;
+        margin: 0;
+        padding: 0;
+        font-size: 1em;
+      }
+      input[type="radio"] {
+        position: absolute;
+        left: -9000px;
+      }
+      
+      input[type="radio"]:checked + .radio-label {
+        background: #d9d9d9;
+        color: #fff;
+      }
+      
+      .radio-label {
+        display: inline-block;
+        border: 2px solid #d9d9d9;
+        border-right: none;
+        padding: 8px 30px;
+        margin: 0;
+        cursor: pointer;
+      }
+      
+      .radio-label:hover {
+        background: #d9d9d9;
+        color: #fff;
+      }
+      .radio-btns-option:first-of-type .radio-label {
+      
+      }
+      
+      .radio-btns-option:nth-of-type(2n) .radio-label {
+        border-right: 2px solid #d9d9d9;
+      
+      }
+      
+      </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</head>
+<body>
+    <div>
+        <div class="yes-no-radio-container">
+          <div class="yes-no-radio-title">Is are was were the thing?</div>
+          <div class="radio-btns">
+            <span class="radio-btns-option">
+              <input type="radio" name="yes-no-radio" value="yes" id="radio-yes"><label class="radio-label" for="radio-yes">Yes</label>
+            </span>
+            <span class="radio-btns-option">
+              <input type="radio" name="yes-no-radio" value="no" id="radio-no"><label class="radio-label" for="radio-no" >No</label>
+            </span>
+          </div>
+        </div>
+        
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+</body>
+</html>

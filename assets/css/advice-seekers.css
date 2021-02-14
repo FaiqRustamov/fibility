@@ -35,8 +35,12 @@ body.my-login-page {
 
 .my-login-page .card-wrapper {
 	width: 400px;
+    
 }
-
+.my-login-page .card-wrapper {
+    width: 400px;
+    height: 100% !important;
+}
 .my-login-page .card {
 	border-color: transparent;
 	box-shadow: 0 4px 8px rgba(0,0,0,.05);
@@ -44,7 +48,6 @@ body.my-login-page {
 
 .my-login-page .card.fat {
 	padding: 10px;
-    height: 700px;
 }
 
 .my-login-page .card .card-title {
@@ -72,7 +75,7 @@ body.my-login-page {
 @media screen and (max-width: 425px) {
 	.my-login-page .card-wrapper {
 		width: 90%;
-		margin: 0 auto;
+		margin: 20px auto;
 	}
 }
 
@@ -92,18 +95,13 @@ body.my-login-page {
     margin-bottom: 200px;
 
 }
-.financial{
-  color: #162c9b !important;
-  background-color: white !important;
-  border: 1px solid #162c9b;
-}
-.financial a{
-	color: #162c9b !important;
-	
-  }
-  .advice a{
-	  color: white !important;
-  }
 .signin-section{
     margin-bottom: 20px;
+}
+label{
+    color:#595959;
+    font-size: 14px;
+    font-family: Mulish;
+    margin-bottom: 8px!important;
+
 }
