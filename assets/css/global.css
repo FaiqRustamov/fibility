@@ -33,6 +33,10 @@ a{
     color: var(--bg-color);
 }
 
+header{
+    background: var(--sky);
+
+}
 
 
 nav{
