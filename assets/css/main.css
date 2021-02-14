@@ -5,6 +5,15 @@
 .right-w{
   padding-top: 200px;
 }
+.about-left{
+  padding-top: 129px;
+}
+.about-right{
+  padding-top: 78px;
+}
+.left-w{
+  padding-bottom: 105px;
+}
 .right-w h2{
 
   margin-bottom: 40px;
@@ -152,3 +161,9 @@ footer{
 
 }
 
+@media screen and (max-width: 768px) {
+  .right-w {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+  }

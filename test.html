@@ -24,18 +24,43 @@
 
 
 <body>
-
-  <h1>International Telephone Input - BOOTSTRAP INPUT GROUP</h1>
-
-  <form action="" method="POST" onsubmit="return submitForm(this);">
-
-    <input type="tel"name ="phone1" id="phone1" value="">
-
-    <input type="tel" class="hide" id="hiden">
-
-    <button type="submit">Validate</button>
-
-</form>
+    <div class="calculate">
+        <div class="calculate-wrap">
+          <div class="calculate-top">
+          <div class="calculate-amount">
+            Contract amount
+          </div>
+          <p class="calculate-text">$<input type="text" id="text" class="calculate-input"></input></p>
+        </div>
+        </div>
+        <div class="calculate-slider">
+          <div id="slider"></div>
+        </div>
+        <div class="calculate-inner">
+          <div class="calculate-block">
+            <p>Payouts currency</p>
+            <p><span>USDT</span></p>
+          </div>
+          
+          <div class="calculate-block">
+            <p>Contract term</p>
+            <p><span>365 days</span></p>
+          </div>
+          
+           <div class="calculate-block">
+              <p>Potential income</p>
+              <p><span>$<span id="prop">2,2000</span></span></p>
+           </div>
+          
+          <div class="calculate-block">
+            <p>Annual income</p>
+            <p><span id="income">112%</span></p>
+         </div>
+        </div>
+        <div class="calculate-btn-wrapper">
+          <a href="#" class="calculate-btn">Buy contract now</a>
+      </div>
+      </div>
 
 <script>
   /* INITIALIZE BOTH INPUTS WITH THE intlTelInput FEATURE*/
