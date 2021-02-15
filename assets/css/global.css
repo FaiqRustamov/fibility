@@ -38,13 +38,25 @@ header{
 
 }
 
+@media screen and (max-width: 425px) {
+	.my-login-page .card-wrapper {
+		width: 90%;
+		margin: 0 auto;
+	}
+}
 
+.my-login-page .card-wrapper {
+    width: 743px;
+    height: 100% !important;
+	
+}
 nav{
     padding: 1rem 2rem 2rem  !important;
     background: var(--sky);
     position: relative;
+    min-height: 18vh;
     justify-content: space-between;
-    height: 88px;
+    height: 65px;
     overflow-y: hidden;
     transition: height 1s cubic-bezier(0.26, -0.01, 0,  1.01);
 }
