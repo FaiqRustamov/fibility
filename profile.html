@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
    <link rel="stylesheet" href=".//assets/css/profile.css">
-        <link rel="stylesheet" href="./assets/css/login.css">
     <link rel="stylesheet" href="./assets/css/global.css">
     <link rel="stylesheet" href="./build/css/intlTelInput.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
@@ -25,7 +24,7 @@
         <nav class="nav flex-row">
             <div class="nav-menu">
                 <div class="nav-brand">
-                    <img class="logo" src="./assets/images/logo.png" alt="Logo">
+                    <a style="display: inline;" href="./index.html"><img class="logo" src="./assets/images/logo.png" alt="Logo"></a> 
                 </div>
             </div>
             <div class="toggle-collapse">
@@ -49,16 +48,7 @@
                 </ul>
             </div>
             <div>
-                <ul class="nav-items flex-row">
-
-                    <li class="nav-link " class="mobile-sign" style="padding: 1.3rem 1rem;">
-                        <b> <a style="font-weight: 700;" href="#" class="sign">Sign in</a></b>
-                    </li>
-                    <li class="nav-link" class="mobile-sign" style="padding: 1.3rem 1rem;">
-                        <b> <a href="#" class="sign">Sign up</a> </b>
-                    </li>
-
-                </ul>
+              <button class="profile-img"><img width="24px" height="24px" style="margin-right: 11px;" src="./assets/images/user.png" alt="">Yagub Mehdiyev</button>
 
             </div>
         </nav>
@@ -70,8 +60,9 @@
                 <div class="card-wrapper">
 
                     <div class="card fat">
-                        <div class="card-body">
-                            <h4 class="card-title " style="text-align: center;">Sign In</h4>
+                        <h2 class="card-title " style="text-align: center;">Profile</h2>
+
+                        <div class="card-body ">
                             <form method="POST" class="my-login-validation" novalidate="">
 
 
@@ -131,20 +122,21 @@
                                   </div>
                                   <div class="form-group">
                                     <label for="myfile">Select a file:</label>
-                                    <label class="btn btn-default upload">
-                                        Upload <input type="file" hidden>
-                                    </label>    
-                                    <label class="btn btn-default upload">
-                                         <a href="" id="delete" style="color: white;"> Delete</a>
-                                    </label>    
+                                    <span class=" btn btn-primary btn-file upload">
+                                         Add photo<input type="file">
+
+                                        </span>    
+                                         <a href="" class="btn" id="delete" style="color: white;"> Delete</a>
                                 
                                 </div>      
                                    <div class="form-group m-0">
-                                    <button type="submit" class="btn btn-primary btn-block">
-                                        Sign In
+                                    <button class="save-btn btn  btn-primary btn-block">
+                                        Save changes
                                     </button>
+                                    
                                 </div>
-                              
+                              <hr>
+                              <button class="sign-btn  btn btn-primary btn-block">Sign out</button>
                             </form>
                         </div>
                     </div>
@@ -168,7 +160,6 @@
         </footer>
         <!--  Footer End -->
     <!--  Footer End -->
-    <script src="path/to/intlTelInput.js"></script>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/8.4.7/js/intlTelInput.js"></script>
@@ -180,12 +171,7 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <script src="/assets/js/login.js"></script>
-    <script>
-        var input = document.querySelector("#phone");
-        window.intlTelInput(input, {
-          // any initialisation options go here
-        });
-      </script>
+    
 </body>
 
 </html>

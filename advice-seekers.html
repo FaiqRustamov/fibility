@@ -154,12 +154,12 @@ input[type=range] {
       background-image: -webkit-gradient(linear,
           left top, 
           right top, 
-          color-stop(15%, #ff5126),
-          color-stop(15%, #eeeeee));
+          color-stop(60%, #ff5126),
+          color-stop(60%, #eeeeee));
 
       background-image: -moz-linear-gradient(left center,
-          #ff5126 0%, #ff5126 15%,
-          #eeeeee 15%, #eeeeee 100%);
+          #ff5126 0%, #ff5126 60%,
+          #eeeeee 60%, #eeeeee 100%);
   }
 .range input::-webkit-progress-value {
   background: #ff6e4a; 
@@ -175,7 +175,7 @@ input[type=range] {
         <nav class="nav flex-row">
             <div class="nav-menu">
                 <div class="nav-brand">
-                    <img class="logo" src="./assets/images/logo.png" alt="Logo">
+                   <a style="display: inline;" href="./index.html"><img class="logo" src="./assets/images/logo.png" alt="Logo"></a> 
                 </div>
             </div>
             <div class="toggle-collapse">
@@ -221,13 +221,13 @@ input[type=range] {
 
                     <div class="card fat">
                         <div class="card-body">
-                            <h4 class="card-title " style="text-align: center;">Sign In</h4>
+                            <h2 class="card-title " style="text-align: center;">Advice seekers</h2>
                             <form method="POST" class="my-login-validation" novalidate="">
 
 
                                 <div class="form-group">
                                     <label for="email">E-Mail </label>
-                                    <input id="email" type="email" class="form-control" name="email" required>
+                                    <input id="email" type="email" class="form-control" name="email" placeholder="name@gmail.com" required>
                                     <div class="invalid-feedback">
                                         Your email is invalid
                                     </div>
@@ -235,7 +235,7 @@ input[type=range] {
 
                                 <div class="form-group">
                                     <label for="password">Password</label>
-                                    <input id="password" type="password" class="form-control" name="password" required>
+                                    <input id="password" type="password" class="form-control" name="password" placeholder="Password" required>
                                     <div class="invalid-feedback">
                                         Password is required
                                     </div>
@@ -243,14 +243,14 @@ input[type=range] {
 
                                 <div class="form-group">
                                     <label for="fullname">Full Name*</label>
-                                    <input id="fullname" type="text" class="form-control" name="fullname" required>
+                                    <input id="fullname" type="text" class="form-control" name="fullname" placeholder="Full Name" required>
                                     <div class="invalid-feedback">
                                         Your fullname is invalid
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="age">Age</label>
-                                    <input id="age" type="number" class="form-control" name="age" required>
+                                    <input id="age" type="number" class="form-control" name="age" placeholder="Age" required>
                                     <div class="invalid-feedback">
                                         Age is required
                                     </div>
@@ -258,7 +258,7 @@ input[type=range] {
                                 
                                 <div class="form-group">
                                     <div class="yes-no-radio-container">
-                                        <div class="yes-no-radio-title">Is are was were the thing?</div>
+                                        <div class="yes-no-radio-title"> Are you Employed?*</div>
                                         <div class="radio-btns">
                                           <span class="radio-btns-option">
                                             <input type="radio" name="yes-no-radio" value="yes" id="radio-yes"><label class="radio-label" for="radio-yes">Yes</label>
@@ -271,7 +271,7 @@ input[type=range] {
                                 </div>
                                 <br>
                                 <div><label for="sel1">Region*</label>
-                                    <select class="form-control" id="sel1">
+                                    <select class="form-control" id="sel1" aria-placeholder="Region">
                                       <option>1</option>
                                       <option>2</option>
                                       <option>3</option>
@@ -281,13 +281,13 @@ input[type=range] {
                                 </div>
                                 <div class="form-group">
                                     <label for="occupation">Occupation*</label>
-                                    <input id="occupation" type="text" class="form-control" name="occupation" required>
+                                    <input id="occupation" type="text" placeholder="Occupation" class="form-control" name="occupation" required>
                                     <div class="invalid-feedback">
                                         Your Occupation is invalid
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="customRange2" class="form-label">Example range</label>
+                                    <label for="customRange2" class="form-label">Your salary range*</label>
                                     <div class="range">
                                         <div class="sliderValue">
                                           <span>100</span>
@@ -316,10 +316,10 @@ input[type=range] {
                               
                                 <div class="form-group">
                                     <label for="phone">Enter your phone number:</label>
-                                    <input type="tel"  class="form-control" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+                                    <input type="tel" placeholder="012 345 678 910"  class="form-control" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
                                   </div>
                                   <div class="form-group">
-                                    <label for="myfile">Select a file:</label>
+                                    <label for="myfile">Profile Picture</label>
                                     <label class="btn btn-default upload">
                                         Upload <input type="file" hidden>
                                     </label>    

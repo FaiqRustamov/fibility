@@ -4,12 +4,12 @@
   .iti__flag {background-image: url("../../build/img/flags@2x.png");}
 }
 
-.upload{
+/* .upload{
     color: white  !important;
     background-color: #162c9b;
     width: 50%;
     display: inline-block;
-}
+} */
 .my-login-page .form-group label{
     width: 100px  !important;
     display: inline  !important;
@@ -25,10 +25,20 @@ html,body {
 }
 
 input{
+	
+		padding: 10px;
+		width: 100%;
+		font-size: 17px;
+		font-family: 'Montserrat', sans-serif;
+		border: 1px solid #D4D4D4;
+		margin-bottom: 14px;
+	
+	max-width: 431px;
     border-radius: 0px!important;
 }
 select{
     border-radius: 0px !important;
+	max-width: 431px;
 
 }
 body.my-login-page {
@@ -80,7 +90,9 @@ body.my-login-page {
 }
 
 .my-login-page .card .card-title {
-	margin-bottom: 30px;
+	margin-bottom: 72px;
+	font-weight: bold;
+	margin-top: 78px;
 }
 
 .my-login-page .form-control {
@@ -124,3 +136,115 @@ body.my-login-page {
 .signin-section{
     margin-bottom: 20px;
 }
+.profile-img{
+	color: white;
+	padding: 12px 35px;
+	background-color: #162c9b;
+	border: none;
+}
+
+
+.my-login-page .card-wrapper {
+    width: 743px;
+    height: 100% !important;
+	
+}
+.my-login-page .card {
+	border-color: transparent;
+	box-shadow: 0 4px 8px rgba(0,0,0,.05);
+}
+
+.my-login-page .card.fat {
+	padding: 10px;
+
+}
+/* .form-group{
+	width: 431px;
+} */
+
+
+.my-login-page .form-group label {
+	width: 100%;
+}
+
+.my-login-page .btn.btn-block {
+	padding: 12px 10px;
+}
+
+.my-login-page .footer {
+	margin: 40px 0;
+	color: #888;
+	text-align: center;
+}
+
+@media screen and (max-width: 425px) {
+	.my-login-page .card-wrapper {
+		width: 90%;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	.my-login-page .card.fat {
+		padding: 0;
+	}
+
+	.my-login-page .card.fat .card-body {
+		padding: 15px;
+	}
+}
+
+#signup{
+    color:#162c9b;
+    font-weight: bold;
+    margin-bottom: 200px;
+
+}
+.signin-section{
+    margin-bottom: 20px;
+}
+
+.sign-btn, .save-btn{
+	max-width: 431px;
+}
+
+.sign-btn{
+	color: #162c9b!important;
+	background-color: white!important;
+	margin-top: 35px!important;
+    padding:1rem 2rem!important;
+    width: 100%!important;
+    border-radius: 0px!important;
+	border: none!important;
+}
+.save-btn{
+	color: #162c9b!important;
+	background-color: white!important;
+	margin-top: 35px!important;
+    padding:1rem 2rem!important;
+    width: 100%!important;
+    border-radius: 0px!important;
+}
+.card-body{
+	display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.upload{
+	padding: 12px 16px  !important;
+}
+#delete{
+background-color: #162c9b;
+color: white;
+padding: 12px 16px;
+max-width: 203px;
+}
+@media only screen and (min-width: 425px) {
+
+	.form-group{
+	 
+	  width: 100%!important;
+	}
+	}

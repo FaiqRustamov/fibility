@@ -44,8 +44,7 @@ nav{
     background: var(--sky);
     position: relative;
     justify-content: space-between;
-    height: 5rem;
-    min-height: 10vh;
+    height: 88px;
     overflow-y: hidden;
     transition: height 1s cubic-bezier(0.26, -0.01, 0,  1.01);
 }
@@ -182,3 +181,25 @@ nav .toggle-collapse .toggle-icons i{
     }
 
 }
+.upload{
+    max-width: 204px;
+}
+.btn-file {
+    position: relative;
+    overflow: hidden;
+  }
+  .btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+  }

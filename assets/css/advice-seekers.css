@@ -35,6 +35,8 @@ body.my-login-page {
 
 .my-login-page .card-wrapper {
 	width: 400px;
+    margin: 64px auto 61px auto;
+    
     
 }
 .my-login-page .card-wrapper {
@@ -104,4 +106,7 @@ label{
     font-family: Mulish;
     margin-bottom: 8px!important;
 
+}
+input{
+    margin-top: 8px!important;
 }
